@@ -32,10 +32,10 @@ services:
     image: mysql:8.0
     container_name: filament-db
     environment:
-      MYSQL_ROOT_PASSWORD: secret
-      MYSQL_DATABASE: filament
-      MYSQL_USER: filament
-      MYSQL_PASSWORD: filament
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
     ports:
